@@ -52,22 +52,19 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 	std:: cout<< "init success \n";
 
 	//create the texture
-	SDL_Surface* pTempSurface = SDL_LoadBMP("Assets/rider.bmp");
+	SDL_Surface* pTempSurface = SDL_LoadBMP("Assets/animate.bmp");
 
 	m_pTexture = SDL_CreateTextureFromSurface(m_pRenderer, pTempSurface);
 
 	SDL_FreeSurface(pTempSurface);
 
-	//get the dimensions of the texture
-
-	SDL_QueryTexture(m_pTexture, NULL, NULL, &m_sourceRectangle.w, &m_sourceRectangle.h);
 
 	//Setting the width ahd height of the rectangle
 
 	m_destinationRectangle.x = m_sourceRectangle.x = 0;
 	m_destinationRectangle.y = m_sourceRectangle.y = 0;
-	m_destinationRectangle.w = m_sourceRectangle.w;
-	m_destinationRectangle.h = m_sourceRectangle.h;
+	m_destinationRectangle.w = m_sourceRectangle.w =128;
+	m_destinationRectangle.h = m_sourceRectangle.h =82;
 
 	m_bRunning = true; //everything inited successfully, start the main loop
 	return true;
@@ -83,6 +80,7 @@ void  Game::render()
 
 void Game::update()
 {
+	m_sourceRectangle.x = 128 * int(((SDL_GetTicks() / 100) % 6));
 }
 
 void  Game::clean()
