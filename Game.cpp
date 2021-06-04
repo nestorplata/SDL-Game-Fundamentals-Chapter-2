@@ -1,4 +1,5 @@
 #include "Game.h"
+#include <SDL_image.h>
 
 Game::Game()
 {
