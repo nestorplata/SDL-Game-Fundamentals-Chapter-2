@@ -1,7 +1,10 @@
 #pragma once
 
 #include<iostream>
+#include <SDL_image.h>
 #include "SDL.h"
+
+
 
 
 #ifndef __Game__

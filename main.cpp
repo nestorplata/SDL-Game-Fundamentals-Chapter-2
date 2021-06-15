@@ -1,6 +1,7 @@
 
 #include "Game.h"
 #include "Windows.h"
+
 #pragma warning(disable : 4996)
 
 //our Game -object

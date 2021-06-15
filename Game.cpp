@@ -1,14 +1,15 @@
 #include "Game.h"
-#include <SDL_image.h>
+
+
 
 Game::Game()
 {
-	std::cout << "game created\n";
+	std::cout << "Game created\n";
 }
 
 Game::~Game()
 {
-	std::cout << "game destroyed\n";
+	std::cout << "Game destroyed\n";
 }
 
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, int flags)
@@ -31,7 +32,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 			if (m_pRenderer != 0) //renderer init success
 			{
 				std::cout << "renderer creation success\n";
-				SDL_SetRenderDrawColor(m_pRenderer, 43, 120, 63, 255);
+				SDL_SetRenderDrawColor(m_pRenderer, 255, 0, 0, 255);
 			}
 			else
 			{
@@ -53,8 +54,15 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 	std:: cout<< "init success \n";
 
 	//create the texture
-	SDL_Surface* pTempSurface = SDL_LoadBMP("Assets/animate.bmp");
+	/*SDL_Surface* pTempSurface = SDL_LoadBMP("Assets/animate.bmp");*/
 
+
+	SDL_Surface* pTempSurface = IMG_Load("Assets/animate-alpha.png");
+
+	if (!pTempSurface) {
+		printf("IMG_Load: %s\n", IMG_GetError());
+		// handle error
+	}
 	m_pTexture = SDL_CreateTextureFromSurface(m_pRenderer, pTempSurface);
 
 	SDL_FreeSurface(pTempSurface);
@@ -75,9 +83,12 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 void  Game::render()
 {
 	SDL_RenderClear(m_pRenderer); //clear the rendere to draw the color
+
 	SDL_RenderCopyEx(m_pRenderer, m_pTexture, &m_sourceRectangle, &m_destinationRectangle,
-		0, 0, SDL_FLIP_HORIZONTAL); //pass in the horizontal flip
+		0, 0, SDL_FLIP_NONE); //pass in the horizontal flip
+
 	SDL_RenderPresent(m_pRenderer); //draw to the screen
+
 }
 
 void Game::update()
