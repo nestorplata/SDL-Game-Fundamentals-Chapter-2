@@ -55,26 +55,12 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 	std:: cout<< "init success \n";
 
 	//create the texture
-	
+
+	//creating texture
+
+	m_textureManager.load("Assets/animate-alpha.png", "animate", m_pRenderer);
 
 
-	SDL_Surface* pTempSurface = IMG_Load("Assets/animate-alpha.png");
-
-	if (!pTempSurface) {
-		printf("IMG_Load: %s\n", IMG_GetError());
-		// handle error
-	}
-	m_pTexture = SDL_CreateTextureFromSurface(m_pRenderer, pTempSurface);
-
-	SDL_FreeSurface(pTempSurface);
-
-
-	//Setting the width ahd height of the rectangle
-
-	m_destinationRectangle.x = m_sourceRectangle.x = 0;
-	m_destinationRectangle.y = m_sourceRectangle.y = 0;
-	m_destinationRectangle.w = m_sourceRectangle.w =128;
-	m_destinationRectangle.h = m_sourceRectangle.h =82;
 
 	m_bRunning = true; //everything inited successfully, start the main loop
 	return true;
@@ -83,10 +69,13 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 
 void  Game::render()
 {
-	SDL_RenderClear(m_pRenderer); //clear the rendere to draw the color
+	SDL_RenderClear(m_pRenderer); //clear the renderer to draw the color
 
-	SDL_RenderCopyEx(m_pRenderer, m_pTexture, &m_sourceRectangle, &m_destinationRectangle,
-		0, 0, SDL_FLIP_NONE); //pass in the horizontal flip
+	m_textureManager.draw("animate", 0, 0, 128, 82, m_pRenderer);
+	
+	m_textureManager.drawFrame("animate", 100, 100, 128, 82, 1,
+		m_currentFrame, m_pRenderer);
+
 
 	SDL_RenderPresent(m_pRenderer); //draw to the screen
 
@@ -94,7 +83,7 @@ void  Game::render()
 
 void Game::update()
 {
-	m_sourceRectangle.x = 128 * int(((SDL_GetTicks() / 100) % 6));
+	m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
 }
 
 void  Game::clean()
