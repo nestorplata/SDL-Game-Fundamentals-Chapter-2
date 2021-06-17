@@ -2,6 +2,7 @@
 
 
 
+
 Game::Game()
 {
 	std::cout << "Game created\n";
@@ -54,7 +55,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 	std:: cout<< "init success \n";
 
 	//create the texture
-	/*SDL_Surface* pTempSurface = SDL_LoadBMP("Assets/animate.bmp");*/
+	
 
 
 	SDL_Surface* pTempSurface = IMG_Load("Assets/animate-alpha.png");
