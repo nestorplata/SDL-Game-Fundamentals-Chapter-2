@@ -1,14 +1,7 @@
 #include "TextureManager.h"
 
-TextureManager::TextureManager()
-{
-	std::cout << "Texture Manager created\n";
-}
+TextureManager* TextureManager::s_pInstance = 0;
 
-TextureManager::~TextureManager()
-{
-	std::cout << "Texture Manager Destroyed\n"; 
-}
 
 bool TextureManager::load(std::string fileName, std::string id,
 	SDL_Renderer* pRenderer)

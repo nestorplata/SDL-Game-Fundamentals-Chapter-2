@@ -1,18 +1,6 @@
 #include "Game.h"
 
 
-
-
-Game::Game()
-{
-	std::cout << "Game created\n";
-}
-
-Game::~Game()
-{
-	std::cout << "Game destroyed\n";
-}
-
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, int flags)
 {
 
@@ -54,15 +42,17 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 	}
 	std:: cout<< "init success \n";
 
-	//create the texture
-
-	//creating texture
-
-	m_textureManager.load("Assets/animate-alpha.png", "animate", m_pRenderer);
-
-
-
 	m_bRunning = true; //everything inited successfully, start the main loop
+	
+	//to load
+	if (!TheTextureManager::Instance()->load("Assets/animate-alpha.png", "animate", m_pRenderer));
+	{
+		return false;
+	}
+
+
+
+
 	return true;
 
 }
@@ -70,10 +60,12 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 void  Game::render()
 {
 	SDL_RenderClear(m_pRenderer); //clear the renderer to draw the color
+		// to draw
+	TheTextureManager::Instance()->draw("animate", 0, 0, 128, 82, m_pRenderer);
 
-	m_textureManager.draw("animate", 0, 0, 128, 82, m_pRenderer);
 	
-	m_textureManager.drawFrame("animate", 100, 100, 128, 82, 1,
+	
+	TheTextureManager::Instance()->drawFrame("animate", 100, 100, 128, 82, 1,
 		m_currentFrame, m_pRenderer);
 
 

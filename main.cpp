@@ -5,7 +5,7 @@
 #pragma warning(disable : 4996)
 
 //our Game -object
-//nigga
+
 
 
 Game* g_game = 0; 
