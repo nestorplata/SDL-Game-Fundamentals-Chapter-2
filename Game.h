@@ -3,8 +3,10 @@
 #include<iostream>
 #include <SDL_image.h>
 #include "SDL.h"
-#include "TextureManager.h"
 
+#include "TextureManager.h"
+#include "GameObject.h"
+#include "player.h"
 
 
 #ifndef __Game__
@@ -35,6 +37,9 @@ private:
 
 	int m_currentFrame;
 
+
+	GameObject m_go;
+	Player m_player;
 	
 };
 
