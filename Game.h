@@ -2,11 +2,13 @@
 
 #include<iostream>
 #include <SDL_image.h>
+#include <vector>
 #include "SDL.h"
 
 #include "TextureManager.h"
 #include "GameObject.h"
 #include "player.h"
+#include "Enemy.h"
 
 
 #ifndef __Game__
@@ -22,11 +24,13 @@ public:
 	bool init(const char* title, int xpos, int ypos, int width, int height, int flags);
 
 	void render();
-	void update();
+	void draw();
 	void handleEvents();
 	void clean();
 
 	bool running() { return m_bRunning; }
+
+	std::vector<GameObject*> m_gameObjects;
 
 private: 
 
@@ -38,9 +42,10 @@ private:
 	int m_currentFrame;
 
 
-	GameObject m_go;
-	Player m_player;
-	
+	GameObject* m_go;
+	GameObject* m_player;
+	GameObject* m_enemy;
+
 };
 
 #endif /* defined(__Game__)*/

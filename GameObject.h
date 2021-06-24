@@ -11,16 +11,16 @@ public:
 	//void draw() { std::cout << "draw game object"; }
 	//void update() { std::cout << "update game object"; }
 	
-	void upload(std::string fileName, std::string textureID,
+	virtual void upload(std::string fileName, std::string textureID,
 		SDL_Renderer* pRenderer);
 
-	void load(int x, int y, int width, int height, std::string textureID);
+	virtual void load(int x, int y, int width, int height, std::string textureID);
 
-	void draw(SDL_Renderer* pRenderer);
+	virtual void draw(SDL_Renderer* pRenderer);
 
-	void update();
+	virtual void update();
 
-	void clean();
+	virtual void clean();
 
 protected:
 

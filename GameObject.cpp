@@ -8,6 +8,7 @@ void GameObject::upload(std::string fileName, std::string textureID,
 		pRenderer);
 
 }
+
 void GameObject::load(int x, int y, int width, int height, std::string textureID)
 {
 	m_x = x;

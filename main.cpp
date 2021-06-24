@@ -22,7 +22,7 @@ int main(int argc, char* argv [] ) {
 	while (g_game ->running()) 
 	{
 		g_game-> handleEvents();
-		g_game-> update();
+		g_game->draw();
 		g_game-> render();
 
 		SDL_Delay(10);
