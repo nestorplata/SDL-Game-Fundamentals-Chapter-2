@@ -1,16 +1,12 @@
 #include "GameObject.h"
 #include "TextureManager.h"
 
-void GameObject::upload(std::string fileName, std::string textureID,
-	SDL_Renderer* pRenderer)
-{
-	TextureManager::Instance()->load(fileName, textureID,
-		pRenderer);
 
-}
-
-void GameObject::load(int x, int y, int width, int height, std::string textureID)
+void GameObject::load(int x, int y, int width, int height,
+	std::string fileName, std::string textureID, SDL_Renderer* pRenderer)
 {
+	TextureManager::Instance()->load(fileName, textureID, pRenderer);
+
 	m_x = x;
 	m_y = y;
 	m_width = width;

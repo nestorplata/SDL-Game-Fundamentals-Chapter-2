@@ -1,8 +1,9 @@
 #include"Enemy.h"
 
-void Enemy::load(int x, int y, int width, int height, std::string textureID)
+void Enemy::load(int x, int y, int width, int height,
+	std::string fileName, std::string textureID, SDL_Renderer* pRenderer)
 {
-	GameObject::load(x, y, width, height, textureID);
+	GameObject::load(x, y, width, height, fileName, textureID, pRenderer);
 }
 
 void Enemy::draw(SDL_Renderer* pRenderer)
