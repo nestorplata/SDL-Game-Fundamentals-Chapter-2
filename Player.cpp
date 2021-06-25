@@ -1,9 +1,8 @@
 #include "player.h"
 
-void Player::load(int x, int y, int width, int height,
-	std::string fileName, std::string textureID, SDL_Renderer* pRenderer)
+void Player::load(int x, int y, int width, int height, 	std::string textureID)
 {
-	GameObject::load(x, y, width, height, fileName, textureID, pRenderer);
+	GameObject::load(x, y, width, height, textureID);
 }
 
 void Player::draw(SDL_Renderer* pRenderer)

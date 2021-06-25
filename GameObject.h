@@ -4,12 +4,16 @@
 #include <SDL_image.h>
 #include "SDL.h"
 
+#include "TextureManager.h"
+
 class GameObject
 {
 public:
+	
+	virtual void upload(std::string fileName, std::string id,
+		SDL_Renderer* pRenderer);
 
-	virtual void load(int x, int y, int width, int height,
-		std::string fileName, std::string textureID, SDL_Renderer* pRenderer);
+	virtual void load(int x, int y, int width, int height, std::string textureID);
 
 	virtual void draw(SDL_Renderer* pRenderer);
 
@@ -17,7 +21,20 @@ public:
 
 	virtual void clean();
 
+	/*
+	virtual void draw()=0;
+	virtual void update()=0;
+	virtual void clean()=0;
+	
+	
+	
+	
+	*/
+
 protected:
+
+	//GameObject(const LoaderParams* pParams) {}
+	//virtual ~GameObject() {}
 
 	std::string m_textureID;
 

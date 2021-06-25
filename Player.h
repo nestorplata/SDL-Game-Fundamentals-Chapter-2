@@ -4,8 +4,7 @@ class Player : public GameObject // inherit from GameObject
 {
 public:
 
-	void load(int x, int y, int width, int height,
-		std::string fileName, std::string textureID, SDL_Renderer* pRenderer);
+	void load(int x, int y, int width, int height, std::string textureID);
 
 	void draw(SDL_Renderer* pRenderer);
 

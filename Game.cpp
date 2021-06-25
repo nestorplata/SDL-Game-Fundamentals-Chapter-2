@@ -48,9 +48,11 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 	m_player = new Player();
 	m_enemy = new Enemy();
 
-	m_go->load(100, 100, 128, 82, "Assets/animate-alpha.png", "animate", m_pRenderer);
-	m_player->load(300, 300, 128, 82, "Assets/animate-alpha.png", "animate", m_pRenderer);
-	m_enemy->load(0, 0, 128, 82, "Assets/animate-alpha.png", "animate", m_pRenderer);
+	m_go->upload("Assets/animate-alpha.png", "animate", m_pRenderer);
+
+	m_go->load(100, 100, 128, 82, "animate");
+	m_player->load(300, 300, 128, 82, "animate");
+	m_enemy->load(0, 0, 128, 82, "animate");
 
 
 	m_gameObjects.push_back(m_go);
