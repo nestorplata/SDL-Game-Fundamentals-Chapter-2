@@ -1,7 +1,5 @@
-﻿  Enemy.cpp
-  Game.cpp
-  GameObject.cpp
-  Player.cpp
+﻿  Game.cpp
+  SDLGameObject.cpp
   main.cpp
   Generating Code...
   SDL-Game-Fundamentals-Chapter-2.vcxproj -> C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\Debug\SDL-Game-Fundamentals-Chapter-2.exe

@@ -1,14 +1,21 @@
 #pragma once
-#include "GameObject.h"
-class Player : public GameObject // inherit from GameObject
+
+#include "SDLGameObject.h"
+class Player : public SDLGameObject // inherit from GameObject
 {
-public:
+ public:
 
-	void load(int x, int y, int width, int height, std::string textureID);
+	Player(const LoaderParams* pParams);
 
-	void draw(SDL_Renderer* pRenderer);
+	virtual void draw();
+	virtual void update();
+	virtual void clean();
 
-	void update();
+	//void load(int x, int y, int width, int height, std::string textureID);
 
-	void clean();
+	//void draw(SDL_Renderer* pRenderer);
+
+	//void update();
+
+	//void clean();
 };
