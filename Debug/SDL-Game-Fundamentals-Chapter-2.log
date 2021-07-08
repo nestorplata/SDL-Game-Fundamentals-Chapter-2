@@ -1,10 +1,4 @@
-﻿  Enemy.cpp
-  Game.cpp
-  Player.cpp
-  SDLGameObject.cpp
+﻿  SDLGameObject.cpp
 C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\SDLGameObject.cpp(5,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\SDLGameObject.cpp(5,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  main.cpp
-  Generating Code...
-  LINK : C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\Debug\SDL-Game-Fundamentals-Chapter-2.exe not found or not built by the last incremental link; performing full link
   SDL-Game-Fundamentals-Chapter-2.vcxproj -> C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\Debug\SDL-Game-Fundamentals-Chapter-2.exe

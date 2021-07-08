@@ -2,7 +2,7 @@
 #include "Game.h"
 
 SDLGameObject::SDLGameObject(const LoaderParams* pParams) : GameObject(pParams),
-m_position(pParams->getX(), pParams->getY())
+m_position(pParams->getX(), pParams->getY()), m_velocity(0,0)
 {
 	m_width = pParams->getWidth();
 	m_height = pParams->getHeight();
@@ -20,10 +20,17 @@ void SDLGameObject::draw()
 		TheGame::Instance()->getRenderer());
 }
 
-void SDLGameObject::update()
+void SDLGameObject::preupdate()
 {
 	m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
-	m_position.setX(m_position.getX() + 1);
+	m_position += m_velocity;
+}
+
+void SDLGameObject::update()
+{
+	preupdate();
+	/*m_position.setX(m_position.getX() + 1);*/
+	m_velocity.setX(1);
 }
 
 

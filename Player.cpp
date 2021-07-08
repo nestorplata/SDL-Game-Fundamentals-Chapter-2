@@ -10,10 +10,14 @@ void Player::draw()
 	SDLGameObject::draw(); //we can now use SDLGaame Object
 }
 
+
 void Player::update()
 {
-	m_position.setX(m_position.getX() - 1);
-	m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
+	preupdate();
+
+	//m_position.setX(m_position.getX() - 1);
+	m_velocity.setX(-1);
+
 }
 
 void Player::clean()
