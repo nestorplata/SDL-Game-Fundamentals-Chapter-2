@@ -6,6 +6,7 @@
 
 #include "GameObject.h"
 #include "TextureManager.h"
+#include "Vector2D.h"
 
 
 #ifndef __SDLGameObject__
