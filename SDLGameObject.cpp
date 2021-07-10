@@ -29,7 +29,6 @@ void SDLGameObject::preupdate()
 void SDLGameObject::update()
 {
 	preupdate();
-	/*m_position.setX(m_position.getX() + 1);*/
 	m_velocity.setX(1);
 }
 

@@ -40,23 +40,4 @@ int main(int argc, char* argv[]) {
 }
 
 
-//
-//	g_game = new Game();
-//	g_game->init("chapter 1", 100, 100, 640, 480, SDL_WINDOW_RESIZABLE);
-//
-//	while (g_game ->running()) 
-//	{
-//		g_game-> handleEvents();
-//		g_game->draw();
-//		g_game-> render();
-//
-//		SDL_Delay(10);
-//	}
-//
-//	g_game->clean();
-//
-//	return 0;
-//
-//}
- 
-	                                                                                                                  
+
