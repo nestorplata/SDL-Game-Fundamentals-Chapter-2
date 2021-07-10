@@ -14,9 +14,7 @@ void Player::draw()
 void Player::update()
 {
 	preupdate();
-
-	m_velocity.setX(-1);
-
+	m_acceleration.setX(-1);
 }
 
 void Player::clean()
