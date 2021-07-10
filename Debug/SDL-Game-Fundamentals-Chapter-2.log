@@ -1,9 +1,5 @@
-﻿  Enemy.cpp
-  Game.cpp
-  Player.cpp
-  SDLGameObject.cpp
-C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\SDLGameObject.cpp(5,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\SDLGameObject.cpp(5,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+﻿  Player.cpp
   main.cpp
+C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\main.cpp(13,32): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   Generating Code...
   SDL-Game-Fundamentals-Chapter-2.vcxproj -> C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\Debug\SDL-Game-Fundamentals-Chapter-2.exe
