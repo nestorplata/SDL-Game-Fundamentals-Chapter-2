@@ -4,7 +4,7 @@
 
 #include "player.h"
 #include "Enemy.h"
-
+#include "InputHandler.h"
 
 #ifndef __Game__
 
@@ -32,6 +32,7 @@ public:
 	void update();
 	void handleEvents();
 	void clean();
+	void quit();
 
 	bool running() { return m_bRunning; }
 

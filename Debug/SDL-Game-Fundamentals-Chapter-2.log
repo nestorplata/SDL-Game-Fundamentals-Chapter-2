@@ -1,5 +1,3 @@
-﻿  Player.cpp
-  main.cpp
-C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\main.cpp(13,32): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-  Generating Code...
+﻿  InputHandler.cpp
+C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\InputHandler.cpp(44,30): warning C4018: '<': signed/unsigned mismatch
   SDL-Game-Fundamentals-Chapter-2.vcxproj -> C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\Debug\SDL-Game-Fundamentals-Chapter-2.exe
