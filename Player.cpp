@@ -56,7 +56,13 @@ void Player::handleInput()
 
 	if (TheInputHandler::Instance()->getButtonState(0, 3))
 	{
-		m_velocity.setX(1);
+	m_velocity.setX(3);
+
+	}
+
+	if (TheInputHandler::Instance()->getMouseButtonStates(LEFT))
+	{
+		m_velocity.setX(-3);
 	}
 }
 
