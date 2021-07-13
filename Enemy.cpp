@@ -14,7 +14,6 @@ void Enemy::update()
 {
 	preupdate();
 
-	m_velocity.setX(1);
 	m_velocity.setY(1);
 
 }
