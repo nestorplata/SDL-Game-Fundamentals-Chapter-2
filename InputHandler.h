@@ -23,7 +23,10 @@ public:
 
 	void initialiseJoysticks();
 	bool joysticksInitialised() { return m_bJoysticksInitialised; }
-
+	bool getButtonState(int joy, int buttonNumber)
+	{
+		return m_buttonStates[joy][buttonNumber];
+	}
 	int xvalue(int joy, int stick);
 	int yvalue(int joy, int stick);
 private:
@@ -34,6 +37,7 @@ private:
 
 	std::vector<SDL_Joystick*> m_joysticks;
 	std::vector<std::pair<Vector2D*, Vector2D*>> m_joystickValues;
+	std::vector<std::vector<bool>> m_buttonStates;
 
 	bool m_bJoysticksInitialised;
 
