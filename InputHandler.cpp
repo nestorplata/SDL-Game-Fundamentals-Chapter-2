@@ -197,6 +197,30 @@ void InputHandler::update()
 				m_mouseButtonStates[RIGHT] = false;
 			}
 		}
+
+		//if (event.type == SDL_MOUSEMOTION)
+		//{
+		//	//if (event.motion.x == NULL)
+		//	//{
+		//	//	m_mousePosition->setX(0);
+		//	//}
+		//	//else
+		//	//{
+		//	//	
+		//	//}
+		//	m_mousePosition->setX(event.motion.x);
+
+		//	//if (event.motion.y == NULL)
+		//	//{
+		//	//	m_mousePosition->setY(0);
+		//	//}
+		//	//else
+		//	//{
+		//	//	
+		//	//}
+
+		//	m_mousePosition->setY(event.motion.y);
+		//}
 	}
 }
 

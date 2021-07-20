@@ -76,14 +76,12 @@ void  Game::render()
 	
 void Game::update()
 {
-	//loop throeugh and update our objects
+	//loop through and update our objects
 
 	for (std::vector<GameObject*>::size_type i = 0; i != m_gameObjects.size(); i++)
 	{
 		m_gameObjects[i]->update();
 	}
-
-
 }
 
 void  Game::clean()

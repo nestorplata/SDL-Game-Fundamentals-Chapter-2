@@ -1,21 +1,21 @@
 ﻿  Game.cpp
   InputHandler.cpp
 C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\InputHandler.cpp(61,30): warning C4018: '<': signed/unsigned mismatch
-C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\InputHandler.cpp(209,44): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\InputHandler.cpp(213,45): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\InputHandler.cpp(224,44): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\InputHandler.cpp(228,45): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\InputHandler.cpp(233,44): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\InputHandler.cpp(237,45): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\InputHandler.cpp(248,44): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\InputHandler.cpp(252,45): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
   Player.cpp
-C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\Player.cpp(35,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\Player.cpp(41,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\Player.cpp(47,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\Player.cpp(53,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\Player.cpp(39,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\Player.cpp(45,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\Player.cpp(51,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\Player.cpp(57,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   SDLGameObject.cpp
 C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\SDLGameObject.cpp(5,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\SDLGameObject.cpp(5,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   main.cpp
 C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\main.cpp(13,32): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   Generating Code...
-C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\InputHandler.cpp(216): warning C4715: 'InputHandler::xvalue': not all control paths return a value
-C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\InputHandler.cpp(231): warning C4715: 'InputHandler::yvalue': not all control paths return a value
+C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\InputHandler.cpp(240): warning C4715: 'InputHandler::xvalue': not all control paths return a value
+C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\InputHandler.cpp(255): warning C4715: 'InputHandler::yvalue': not all control paths return a value
   SDL-Game-Fundamentals-Chapter-2.vcxproj -> C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\Debug\SDL-Game-Fundamentals-Chapter-2.exe

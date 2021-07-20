@@ -7,12 +7,26 @@ class Vector2D
 public:
 
 	Vector2D(float x, float y) : m_x(x), m_y(y) {}
-
+	
 	float getX() { return m_x; }
+
 	float getY() { return m_y; }
+
 
 	void setX(float x) { m_x = x; }
 	void setY(float y) { m_y = y; }
+
+	//void NULLifier(Vector2D& vec) {
+	//	if (vec.getX() == NULL)
+	//	{
+	//		vec.setX(m_x);
+	//	}
+	//	if (vec.getY() == NULL)
+	//	{
+	//		vec.setY(m_x);
+	//	}
+
+	//}
 
 	float length() { return sqrt(m_x * m_x + m_y * m_y); }
 

@@ -15,4 +15,5 @@ class Player : public SDLGameObject // inherit from GameObject
 private:
 
 	void handleInput();
+
 };

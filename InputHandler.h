@@ -2,6 +2,7 @@
 
 #include "SDL.h"
 #include"Game.h"
+#include"Vector2D.h"
 
 #include <vector>
 #include<iostream>
@@ -42,6 +43,11 @@ public:
 
 	int xvalue(int joy, int stick);
 	int yvalue(int joy, int stick);
+
+	Vector2D* getMousePosition()
+	{
+		return m_mousePosition;
+	}
 private:
 	InputHandler();
 	~InputHandler() {};
@@ -57,6 +63,7 @@ private:
 
 	const int m_joystickDeadZone = 10000;
 
+	Vector2D* m_mousePosition;
 };
 
 typedef InputHandler TheInputHandler;
