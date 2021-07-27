@@ -44,12 +44,12 @@ public:
 	int xvalue(int joy, int stick);
 	int yvalue(int joy, int stick);
 
+	bool isKeyDown(SDL_Scancode key);
+
 	Vector2D* getMousePosition()
 	{
 		return m_mousePosition;
 	}
-	
-
 
 private:
 	InputHandler();
@@ -67,7 +67,7 @@ private:
 	const int m_joystickDeadZone = 10000;
 
 	Vector2D* m_mousePosition;
-
+	const Uint8* m_keystates;
 };
 
 typedef InputHandler TheInputHandler;
