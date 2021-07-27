@@ -20,6 +20,7 @@ void Player::update()
 	{
 		Vector2D* vec = nell;
 		m_velocity = (*vec - m_position)/100;
+
 	}
 
 	handleInput(); // add our function
@@ -32,6 +33,7 @@ void Player::clean()
 
 void Player::handleInput()
 {
+
 	if (TheInputHandler::Instance()->joysticksInitialised())
 	{
 		if (TheInputHandler::Instance()->xvalue(0, 1) > 0 ||
@@ -58,36 +60,58 @@ void Player::handleInput()
 			m_velocity.setY(1 * TheInputHandler::Instance()->yvalue(0, 2));
 		}
 	}
+
 	//when controller is connected
-	//if (TheInputHandler::Instance()->getButtonState(0, 3))
-	//{
-	//m_velocity.setX(3);
+	if (TheInputHandler::Instance()->joysticksInitialised())
+	{
+		if (TheInputHandler::Instance()->getButtonState(0, 3))
+		{
+			m_velocity.setX(3);
+		}
+		if (TheInputHandler::Instance()->getMouseButtonStates(LEFT))
+		{
+			m_velocity.setX(-3);
+		}
+	}
 
-	//}
-
-	//if (TheInputHandler::Instance()->getMouseButtonStates(LEFT))
-	//{
-	//	m_velocity.setX(-3);
-	//}
-
-	if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_RIGHT))
+	//x value based on key input
+	if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_RIGHT) &&
+		TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_LEFT))
+	{
+		m_velocity.setX(0);
+	}
+	else if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_RIGHT))
 	{
 		m_velocity.setX(2);
 	}
-
-	if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_LEFT))
+	else if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_LEFT))
 	{
 		m_velocity.setX(-2);
 	}
+	else if(TheInputHandler::Instance()->joysticksInitialised() ==false && TheInputHandler::Instance()->getMousePosition() == NULL)
+	{
+		m_velocity.setX(0);
+	}
 
-	if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_UP))
+	//y value based on key input
+	if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_UP) &&
+		TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_DOWN))
+	{
+		m_velocity.setY(0);
+	}
+	else if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_UP))
 	{
 		m_velocity.setY(-2);
 	}
-	
-	if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_DOWN))
+	else if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_DOWN))
 	{
 		m_velocity.setY(2);
 	}
+	else if (TheInputHandler::Instance()->joysticksInitialised() == false && TheInputHandler::Instance()->getMousePosition() == NULL)
+	{
+		m_velocity.setY(0);
+	}
+
+
 }
 

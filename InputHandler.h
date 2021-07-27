@@ -51,6 +51,21 @@ public:
 		return m_mousePosition;
 	}
 
+	//private functions to handle different event types
+	
+	//handle keyboard events
+	void onKeyDown();
+	void onKeyUp();
+
+	//handle mouse events
+	void onMouseMove(SDL_Event& event);
+	void onMouseButtonDown(SDL_Event& event);
+	void onMouseButtonUp(SDL_Event& event);
+
+	//handle joysticks events
+	void onJoystckAxisMove(SDL_Event& event);
+	void onJoystickButtonDown(SDL_Event& event);
+	void onJoystickButtonUp(SDL_Event& event);
 private:
 	InputHandler();
 	~InputHandler() {};
@@ -63,7 +78,7 @@ private:
 	std::vector<bool> m_mouseButtonStates;
 
 	bool m_bJoysticksInitialised;
-
+	//bool mouseused;
 	const int m_joystickDeadZone = 10000;
 
 	Vector2D* m_mousePosition;
