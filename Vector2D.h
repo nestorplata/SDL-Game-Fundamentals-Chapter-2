@@ -16,18 +16,6 @@ public:
 	void setX(float x) { m_x = x; }
 	void setY(float y) { m_y = y; }
 
-	//void NULLifier(Vector2D& vec) {
-	//	if (vec.getX() == NULL)
-	//	{
-	//		vec.setX(m_x);
-	//	}
-	//	if (vec.getY() == NULL)
-	//	{
-	//		vec.setY(m_x);
-	//	}
-
-	//}
-
 	float length() { return sqrt(m_x * m_x + m_y * m_y); }
 
 	//addittion of two vectors

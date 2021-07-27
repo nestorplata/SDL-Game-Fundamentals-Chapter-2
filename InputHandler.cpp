@@ -68,6 +68,7 @@ void InputHandler::clean()
 void InputHandler::update()
 {
 	SDL_Event event;
+	
 	while (SDL_PollEvent(&event))
 	{
 		if (event.type == SDL_QUIT)
@@ -198,29 +199,27 @@ void InputHandler::update()
 			}
 		}
 
-		//if (event.type == SDL_MOUSEMOTION)
-		//{
-		//	//if (event.motion.x == NULL)
-		//	//{
-		//	//	m_mousePosition->setX(0);
-		//	//}
-		//	//else
-		//	//{
-		//	//	
-		//	//}
-		//	m_mousePosition->setX(event.motion.x);
+		if (event.type == SDL_MOUSEMOTION)
+		{
 
-		//	//if (event.motion.y == NULL)
-		//	//{
-		//	//	m_mousePosition->setY(0);
-		//	//}
-		//	//else
-		//	//{
-		//	//	
-		//	//}
+			float x, y;
+			if (event.motion.x )
+			{
+				x = event.motion.x;
+			}
 
-		//	m_mousePosition->setY(event.motion.y);
-		//}
+			if (event.motion.y)
+			{
+				y = event.motion.y;
+			}
+
+			if (event.motion.x && event.motion.y)
+			{
+				x = event.motion.x;
+				y = event.motion.y;
+				m_mousePosition = new Vector2D(x, y);
+			}
+		}
 	}
 }
 

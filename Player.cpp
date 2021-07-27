@@ -13,13 +13,14 @@ void Player::draw()
 
 void Player::update()
 {
-
 	preupdate();
-	m_velocity.setY(1);
-	m_velocity.setX(1);
-	//Vector2D* vec = TheInputHandler::Instance()->getMousePosition();
-	////m_position.NULLifier(*vec);
-	//m_velocity = (*vec - m_position) / 100;
+
+	Vector2D* nell = TheInputHandler::Instance()->getMousePosition();
+	if (nell)
+	{
+		Vector2D* vec = nell;
+		m_velocity = (*vec - m_position)/100;
+	}
 
 	handleInput(); // add our function
 }

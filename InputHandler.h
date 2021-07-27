@@ -48,6 +48,9 @@ public:
 	{
 		return m_mousePosition;
 	}
+	
+
+
 private:
 	InputHandler();
 	~InputHandler() {};
@@ -64,6 +67,7 @@ private:
 	const int m_joystickDeadZone = 10000;
 
 	Vector2D* m_mousePosition;
+
 };
 
 typedef InputHandler TheInputHandler;
