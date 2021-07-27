@@ -58,17 +58,17 @@ void Player::handleInput()
 			m_velocity.setY(1 * TheInputHandler::Instance()->yvalue(0, 2));
 		}
 	}
+	//when controller is connected
+	//if (TheInputHandler::Instance()->getButtonState(0, 3))
+	//{
+	//m_velocity.setX(3);
 
-	if (TheInputHandler::Instance()->getButtonState(0, 3))
-	{
-	m_velocity.setX(3);
+	//}
 
-	}
-
-	if (TheInputHandler::Instance()->getMouseButtonStates(LEFT))
-	{
-		m_velocity.setX(-3);
-	}
+	//if (TheInputHandler::Instance()->getMouseButtonStates(LEFT))
+	//{
+	//	m_velocity.setX(-3);
+	//}
 
 
 }
