@@ -1,7 +1,6 @@
 #pragma once
 
 #include <vector>
-
 #include "player.h"
 #include "Enemy.h"
 #include "InputHandler.h"
@@ -9,6 +8,13 @@
 #ifndef __Game__
 
 #define __Game__
+
+//enum game_states
+//{
+//	MENU = 0,
+//	PLAY = 1,
+//	GAMEOVER  = 2
+//};
 
 class Game
 {
@@ -53,8 +59,10 @@ private:
 	int m_currentFrame;
 
 	SDLGameObject* uploader;
+	//Player* m_pPlayer;
+	//Enemy* m_pEnemy;
 
-
+	//game_states m_currentGameState;
 };
 
 typedef Game TheGame;

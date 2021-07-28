@@ -47,13 +47,21 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 
 	m_bRunning = true; //everything inited successfully, start the main loop
 	
+	//create menu objects
+	//m_pMenuObj1 = new MenuObject();
+	//m_pMenuObj2 = new MenuObject();
+
+	//create play objects
+	//m_pPlayer = new Player();
+	//m_pEnemy = new Enemy();
+
+	//create game over objects...
+	//m_currentGameState = MENU;
 
 	uploader->upload("Assets/animate-alpha.png", "animate", m_pRenderer);
 
 	m_gameObjects.push_back(new SDLGameObject(new LoaderParams(0, 0, 128, 82, "animate")));
-
 	m_gameObjects.push_back(new Player(new LoaderParams(320, 240, 128, 82, "animate")));
-
 	m_gameObjects.push_back(new Enemy(new LoaderParams(0, 0, 128, 82, "animate")));
 
 	return true;
@@ -82,6 +90,20 @@ void Game::update()
 	{
 		m_gameObjects[i]->update();
 	}
+
+	//switch (m_currentGameState)
+	//{
+	//case MENU:
+	//	m_menuObj1->update();
+	//	m_menuObj2->update();
+	//	break;
+	//case PLAY:
+	//	m_pPlayer->update();
+	//	m_pEnemy->update();
+
+	//case GAMEOVER:
+	//	// do game over stuff...
+	//}
 }
 
 void  Game::clean()
@@ -100,17 +122,6 @@ void Game::quit()
 
 void Game::handleEvents()
 {
-	//SDL_Event event;
-	//if (SDL_PollEvent(&event))
-	//{
-	//	switch (event.type)
-	//	{
-	//	case SDL_QUIT:
-	//		m_bRunning = false;
-	//		break;
-	//	default:
-	//		break;
-	//	}
-	//}
+
 	TheInputHandler::Instance()->update();
 }
