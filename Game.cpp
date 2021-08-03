@@ -46,7 +46,12 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 	TheInputHandler::Instance()->initialiseJoysticks();
 
 	m_bRunning = true; //everything inited successfully, start the main loop
-	
+
+	//setting up menu
+	m_pGameStateMachine = new GameStateMachine();
+	m_pGameStateMachine->changeState(new MenuState());
+	m_currentGameState = MENU;
+
 	//create menu objects
 	//m_pMenuObj1 = new MenuObject();
 	//m_pMenuObj2 = new MenuObject();
@@ -56,7 +61,6 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 	//m_pEnemy = new Enemy();
 
 	//create game over objects...
-	//m_currentGameState = MENU;
 
 	uploader->upload("Assets/animate-alpha.png", "animate", m_pRenderer);
 
@@ -65,19 +69,30 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 	m_gameObjects.push_back(new Enemy(new LoaderParams(0, 0, 128, 82, "animate")));
 
 	return true;
-
 }
 
 void  Game::render()
 {
 	SDL_RenderClear(m_pRenderer); //clear the renderer to draw the color
 
-	//loop through our objects and draw them
-	for (std::vector<GameObject*>::size_type i = 0; i != m_gameObjects.size(); i++)
+	switch (m_currentGameState)
 	{
-		m_gameObjects[i]->draw();
+	case MENU:
+		m_pGameStateMachine->render();
+		break;
+
+	case PLAY:
+		for (std::vector<GameObject*>::size_type i = 0; i != m_gameObjects.size(); i++)
+		{
+			m_gameObjects[i]->draw();
+		}
+		break;
+
+	case GAMEOVER:
+		break;
 	}
 
+	//loop through our objects and draw them
 	SDL_RenderPresent(m_pRenderer); //draw to the screen
 
 }
@@ -85,25 +100,23 @@ void  Game::render()
 void Game::update()
 {
 	//loop through and update our objects
-
+	switch (m_currentGameState)
+	{
+	case MENU:
+	//  m_menuObj1->update();
+	//	m_menuObj2->update();
+		break;
+	case PLAY:
 	for (std::vector<GameObject*>::size_type i = 0; i != m_gameObjects.size(); i++)
 	{
 		m_gameObjects[i]->update();
 	}
+	break;
 
-	//switch (m_currentGameState)
-	//{
-	//case MENU:
-	//	m_menuObj1->update();
-	//	m_menuObj2->update();
-	//	break;
-	//case PLAY:
-	//	m_pPlayer->update();
-	//	m_pEnemy->update();
-
-	//case GAMEOVER:
+	case GAMEOVER:
 	//	// do game over stuff...
-	//}
+		break;
+	}
 }
 
 void  Game::clean()
@@ -124,4 +137,10 @@ void Game::handleEvents()
 {
 
 	TheInputHandler::Instance()->update();
+
+	if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_RETURN))
+	{
+		m_pGameStateMachine->changeState(new PlayState());
+		m_currentGameState = PLAY;
+	}
 }
