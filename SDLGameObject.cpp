@@ -36,7 +36,7 @@ void SDLGameObject::update()
 
 void SDLGameObject::clean()
 {
-	std::cout << "clean game object";
+	std::cout << "clean game object\n";
 }
 
 void SDLGameObject::upload(std::string fileName, std::string id,

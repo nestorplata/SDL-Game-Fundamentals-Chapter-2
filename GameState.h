@@ -1,6 +1,12 @@
 #pragma once
 #include<string>
 #include <iostream>
+#include <vector>
+
+#include "GameObject.h"
+#include"TextureManager.h"
+
+
 class GameState
 {
 public:
