@@ -47,6 +47,8 @@ public:
 
 	bool running() { return m_bRunning; }
 
+	GameStateMachine* getStateMachine() { return m_pGameStateMachine; }
+
 	std::vector<GameObject*> m_gameObjects;
 
 private: 
@@ -66,6 +68,7 @@ private:
 	SDLGameObject* uploader;
 
 	GameStateMachine* m_pGameStateMachine;
+
 
 	//Player* m_pPlayer;
 	//Enemy* m_pEnemy;
