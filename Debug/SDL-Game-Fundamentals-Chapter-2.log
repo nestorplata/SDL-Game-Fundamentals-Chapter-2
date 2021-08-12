@@ -1,4 +1,5 @@
 ﻿  Game.cpp
+C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\Vector2D.h(19,30): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
   InputHandler.cpp
 C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\InputHandler.cpp(61,30): warning C4018: '<': signed/unsigned mismatch
 C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\InputHandler.cpp(120,44): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
@@ -14,6 +15,10 @@ C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\InputHandler.cpp(186,
 C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\MenuState.cpp(7,20): warning C4018: '<': signed/unsigned mismatch
 C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\MenuState.cpp(15,20): warning C4018: '<': signed/unsigned mismatch
 C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\MenuState.cpp(44,20): warning C4018: '<': signed/unsigned mismatch
+  PlayState.cpp
+C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\PlayState.cpp(8,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\PlayState.cpp(16,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\PlayState.cpp(36,20): warning C4018: '<': signed/unsigned mismatch
   Player.cpp
 C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\Player.cpp(42,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\Player.cpp(48,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
@@ -23,6 +28,7 @@ C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\Player.cpp(60,22): wa
 C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\SDLGameObject.cpp(5,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\SDLGameObject.cpp(5,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   main.cpp
+C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\Vector2D.h(19,30): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
 C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\main.cpp(13,32): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   Generating Code...
 C:\Users\ASUS\source\repos\SDL-Game-Fundamentals-Chapter-2\InputHandler.cpp(127): warning C4715: 'InputHandler::xvalue': not all control paths return a value

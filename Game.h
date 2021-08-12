@@ -1,25 +1,21 @@
 #pragma once
 
 #include <vector>
-#include "player.h"
-#include "Enemy.h"
+
 #include "InputHandler.h"
+#include "GameStateMachine.h"
 
 #include "GameState.h"
-#include "GameStateMachine.h"
 #include "MenuState.h"
 #include "PlayState.h"
+
+#include "player.h"
+#include "Enemy.h"
 
 #ifndef __Game__
 
 #define __Game__
 
-enum game_states
-{
-	MENU = 0,
-	PLAY = 1,
-	GAMEOVER  = 2
-};
 
 class Game
 {
@@ -69,11 +65,6 @@ private:
 
 	GameStateMachine* m_pGameStateMachine;
 
-
-	//Player* m_pPlayer;
-	//Enemy* m_pEnemy;
-
-	game_states m_currentGameState;
 };
 
 typedef Game TheGame;
