@@ -33,7 +33,7 @@ void SDLGameObject::draw()
 
 void SDLGameObject::preupdate()
 {
-	m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
+	m_currentFrame = int(((SDL_GetTicks() / 100) % 5));
 	m_velocity += m_acceleration;
 	m_position += m_velocity;
 }

@@ -57,7 +57,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 	uploader->upload("Assets/helicopter.png", "helicopter", m_pRenderer);
 
 
-	m_gameObjects.push_back(new Player(new LoaderParams(320, 240, 128, 82, "animate")));
+	//m_gameObjects.push_back(new Player(new LoaderParams(320, 240, 128, 82, "animate")));
 	//m_gameObjects.push_back(new SDLGameObject(new LoaderParams(0, 0, 128, 82, "animate")));
 	//m_gameObjects.push_back(new Enemy(new LoaderParams(0, 0, 128, 82, "animate")));
 
